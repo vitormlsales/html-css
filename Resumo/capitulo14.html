@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capítulo 14</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <main>
+        <h1 id="principal">Capítulo 14</h1>
+        <h1>Fontes</h1>
+        <h2>Primeiros Passos em Tipografia</h2>
+        <h2>Anatomia do Tipo</h2>
+        <h2>Familias de fontes com CSS</h2>
+        <h3>Serifadas</h3>
+        <h3>Sem serifa</h3>
+        <h3>Monoespaçadas</h3>
+        <h3>Hand writing (Escrita a mão)</h3>
+        <h3></h3>
+        <h2>Tamanho de Fontes e suas medidas</h2>
+        <p>Existem muitas formas de definir tamanho usando estilo font-size. Podemos dividir em medidas relativas e medidas absolutas.</p>
+        <p>Medidas Absolutas:
+            <ul>
+                <li>cm (centimetros)</li>
+                <li>mm (milimetros)</li>
+                <li>in (inches = polegadas</li>
+                <li>px (pixels)</li>
+                <li>pt (pontos)</li>
+                <li>pc (paica)</li>
+            </ul>
+        </p>
+        <p>Desvantagem de utilizar as medidas absolutas fica na variação dos tamanhos das telas: celular, computador, TV, etc... Pode ser que a sua programação não se adapte bem a essas mudanças.</p>
+        <p>Medidas Relativas:
+            <ul>
+                <li>em (altura da letra maiúscula)</li>
+                <li>ex (altura x, "importante para a tipografia)</li>
+                <li>rem (altura do corpo da fonte)</li>
+                <li>vw (view width = largura da viewport, em porcentagem)</li>
+                <li>vh (view height = altura da viewport, em porcentagem) </li>
+                <li>% (porcentagem)</li>
+            </ul>
+        </p>
+        <p>O curso em video trabalha a partir das recomendações da W3C, e para uso em font-size o recomendado é "px" (pixel) ou "em" (altura da letra maiúscula). O que vai ser utilizado no Curso em Vídeo vai ser a medida "em". Clicando <a href="https://www.w3.org/standards/webdesign/htmlcss" rel="external" target="_blank">aqui</a> vocé será redirecionado para a página da W3C sobre HTML e CSS.</p>
+        <p style="text-align: center;"><a href="modulo2.html" rel="prev"></a></p>
+        <p><mark style="background-color: #faff00;">Geralmente, o padrão do tamanho da letra dos navegadores está em 16px.</mark> Se eu não definir tamanho, esse provavelmente será o tamanho da fonte do meu site. Agora eu vou estar dando alguns exemplos de medidas de font-size.</p>
+        <p style="background-color: #faff00;">Obs: 16px = 1 em. O "em" está relacionado a porcentagem do tamanho relativ
+            o da tela e por essa adaptabilidade é o recomendado a ser utilizado.</p>
+        <ul>
+            <li><p style="font-size: .4cm;">.4cm é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 4mm;">4mm é o tamanho deste exemplo.</p></li>
+            <li>
+                <p style="font-size: 10pt;">10pt é o tamanho deste exemplo.</p>
+            </li>
+            <li><p style="font-size: 10px;">10px é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: .1in;">.1in é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 1em;">1em é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 2ex;">2ex é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 1rem;">1rem é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 1.5vw;">1.5vw é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 2vh;">2vh é o tamanho deste exemplo.</p></li>
+            <li><p style="font-size: 100%;">100% é o tamanho deste exemplo.</p></li>
+        </ul>
+        <h2>Peso, estilo e shorthand font</h2>
+        <p>Agora vamos aprender alguns estilos novos do CSS. O peso da fonte (font-weight), estilo da fonte (font-style) e vamos utilizar o nosso primeiro shorthand, que é um principio muito importante. </p>
+        <p>Nem todas as fontes vão ter as diferentes opções de peso, por isso é importante você escolher uma que abra essa possibilidade quando você quiser trabalhar com isso.</p>
+        <p>Existem duas formas de representar o font-weight. A primeira é descrevendo com palavras: lighter (mais leve), normal, bold (negrito), bolder (mais negrito). E podemos representar com valores de 100 a 900, pulando de 100 em 100, por exemplo: 100 ou 500 ou 700, sendo sendo o mais leve e 900 o mais pesado.</p>
+        <p>O estilo de fonte ou font-style vai ser utilizado para deixar a fonte em itálico.</p>
+        <p>Agora a hora que esperavamos o shorthand. O shorthand é utilizado para uma série de configurações que podem ser de forma mais resumida. Eu vou mostrar o exemplo utilizando as configurações de fonte e depois mostrando como seria feita na forma de shorthand.</p>
+        <pre>
+            <code>
+                <p style="font-family: code;">&lt;style&gt; 
+                    body {
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-height: 1em;
+                    font-weight: 400 ou normal;
+                    font-style: none;
+                }
+                &lt;/style&gt;
+                </p>
+            </code>
+        </pre>
+        <p>O shorthand eu vou dar o camando de estilo "<mark style="background-color: #faff00;">font:</mark>
+            " e depois, sem precisar dar cada comando, vou inserir as medidas de todos esses estilos na seguinte ordem: <br>
+        <mark style="background-color: #faff00;">font-style > font-weight > font-size > font-family</mark></p>
+        <p>O comando ficaria assim: <br>
+        <pre>
+            &lt;style&gt;
+            body{
+                font: italic bolder 3em Arial
+            }
+            &lt;/style&gt;
+        </pre></p>
+        <p>As definições padrões, como estilo de letra padrão eu não preciso definir, pulo para o próximo comando. O que eu não posso fazer é inverter as ordens das definições.</p>
+        <p>
+            Posso fazer assim, pois estou apenas pulando font-style, mas não inverti ordem: <br>
+            <pre>
+                &lt;style&gt;
+                body{
+                    font: bold 2em Times New Roman
+                }
+                &lt;/style&gt;
+            </pre>
+        </p>
+        <p>
+            Assim o shorthand para o código não irá funcionar, pois a ordem foi invertida: <br>
+            <pre>
+                &lt;style&gt;
+                body{
+                    font: bold Times New Roman 2em
+                }
+                &lt;/style&gt;
+            </pre>
+        </p>
+        <p><mark style="background-color: #faff00;">Obs: Não existe shorthand para tudo, porém existe vários shorthands que podemos utilizar no nosso código HTML</mark></p>
+        <p><mark style="background-color: #faff00;">Propriedade Shorthand: propriedade onde consigo dizer várias coisas em uma única linha</mark></p>
+        <h2>Usando Google Fonts</h2>
+        <p>Aqui vamos aprender com importar fontes do site google fonts.</p>
+        <p>Primeiramente acesse esse link: <a href="https://fonts.google.com/" rel="external" target="_blank">https://fonts.google.com/</a></p>
+        <p>No site você poderá escolher entre vários tipos de fonte, filtrando por categoria. Escolha sua fonte clicando nela e depois apertando no botão para adicionar a sua lista de fontes.</p>
+        <p>Você terá a opção de fazer o download, utilizar a tag de HTML &lt;link&gt; ou importá-la para utiliza-la em seu código CSS. <br>
+        A melhor opção é importa-la pelo CSS, fazendo com que seu codigo fique mais simples e alterações futuras sejam mais fáceis. </p>
+        <p>Copie o código entre a tag style e insira dentro da tag style dentro da sua programação.</p>
+        <p>Próximo passo é utilizar o estilo font-family e escolher a fonte importada.</p>
+        <h2>Usando fontes externas baixadas</h2>
+        <p>Nem sempre o Google Fonts resolverá os seus problemas. O cliente pode pedir uma fonte especifica que não tenha no google fonts, mas tenha em algum outro site especializado em fontes gratuitas e pagas. Um site muito conhecido é o:
+        <a href="https://www.dafont.com/pt/" rel="external" target="_blank">https://www.dafont.com/pt/</a>
+        </p>
+        <p>Dica: Ao escolher a fonte, checar os glifos dessas fontes e observar se eles possuem as letras com acentuação. Isso é importante para quem trabalha com a lingua portuguesa ou espanhola.</p>
+        <p>Primeiro passo é escolher uma fonte e fazer o download dela. Poderá vir em arquivo ttf ou otf ou os dois. A diferença dos dois tipos de arquivos é o navegador que utiliza cada arquivo, veremos mais para frente com mais detalhes.</p>
+        <p>Dica: faça uma pasta exclusiva para suas fontes, preferivelmente nomeada "fonts".</p>
+        <p>Para utilizar a fonte externa iremos usar um seletor especial @fontface: e ao executá-la ele irá pedir font-family, que será o nome de sua escolha para selecionar essa nova fonte e vai pedir a source url, que você irá digitar de onde essa fonte vai ser resgatada. Quando você utilizar o seletor, ele irá aparecer da seguinte forma:</p>
+        <p>
+            <pre>
+                    @font-face {
+                        font-family: ;
+                        src: url();
+                    }
+            </pre>
+        </p>
+        Para este exemplo eu selecionei a fonte "love larry" e ela veio em arquivo ttf. Ao lado da url e antes do ponto e virgula você irá adicionar o formato que aquele arquivo é. Vou demonstrar como o arquivo ficaria de forma preenchida:
+        <p>
+            <pre>
+                    @font-face {
+                        font-family: 'love';
+                        src: url('fonts/love larry ttf.ttf') format('truetype');
+                        font-weight: normal;
+                        font-style: normal;
+                    }
+            </pre>
+        </p>
+        <p>Escolhi o nome 'love' para inserir em font family, então quando eu estive escrevendo CSS e colocar font-family e quiser utilizar 'Love Larry' vou escrever 'love'. Em src: url() coloco a informação dentro das parenteses ('fonts/love larry ttf.ttf'), fonts/ eu escrevo porque, por motivo de organização criei uma pasta 'fonts' para colocar minhas fontes externas e depois escrevo o nome da fonte exatamente como está escrito no nome do arquivo. Por último escrevo o format() que nesse caso ttf é 'truetype'.</p>
+        <p>Aproveito e defino o font-weight e o font-style para padronizar o modelo dessa fonte quando ela for utilizada.</p>
+        <p>Exemplo de fonte</p>
+        <p style="font-family: 'love'; font-weight: normal;">Love Larry</p>
+        
+        <h2>Capturando as Fontes de um Site</h2>
+        <p>Pode ser que você esteja visitando um site e goste da fonte que aquele site está utilizando, mas não sabe qual é aquela fonte. Para descobrir vamos utilizar a uma extensão do CHROME.</p>
+        <p>Vamos para o <a href="https://chrome.google.com/webstore/category/extensions?hl=pt-BR" rel="external" target="_blank">chrome web store</a>. Ao entrar nesse site você vai ter acesso a todas as extensões autorizadas pela google para o chrome. Existem algumas extensões com a a função de descobrir a fonte, mas vamos utilizar apenas uma. O nome dela é "fonts ninja</p>
+        <p>Essa extensão é muito simples de ser utilizada. Faz o download, liga a extensão e assim que estiver ativa ela irá lhe mostrar em uma janela todas as fontes usadas naquela página, você pode clicar na fonte e fazer testes nela.
+        </p>
+        <p>Alguns serviços dessa extensão são pagos, mas com o que aprendemos aqui o serviço já está feito. Depois de descobrir a fonte, vamos utilizar um dos dois caminhos que já haviamos aprendido anteriormente para incluir essa fonte em nosso site, google fonts ou dafont.</p>
+        <h2>Detectando Fontes em Imagens</h2>
+        <p>Com o metódo da extensão do chrome "fonts ninja" podemos descobrir fontes que gostamos em site que visitamos mas não sabemos o nome. Porém esse método não possibilita retirarmos fontes de imagens.</p>
+        <p>Agora vamos mostrar três sites que possibilitam descobrir fontes usadas em imagens. Vamos dar três opções pois nenhuma dessas opções é definitiva e precisamos ter todas opções para quando uma delas apresentar dificuldades.</p>
+        <p>
+            <ul>
+                <li><a href="https://www.whatfontis.com/" rel="external" target="_blank">whatfontis.com</a></li>
+                <li><a href="https://www.fontsquirrel.com/" rel="external" target="_blank">fontsquirrel.com</a></li>
+                <li><a href="http://fontfinder.com/" rel=" external" target="_blank">fontfider.com</a></li>
+            </ul>
+        </p>
+        <p>Todos funcionano de modo similar. Você tem que possuir a imagem salva, então a arrasta e joga na janela do site. Ele vai reconhecer praticamente todas as fontes que estão na imagem e vai lhe mostrar a fonte que está na imagem ou opções similares. Dos três sites o mais eficaz foi whatfontis, mas é bom ter as três opções para caso uma não esteja dando conta do recado.</p>
+        <h2>Alinhamento de Textos com CSS</h2>
+        <p>Para alinhar textos usamos o comando "text-align: ;", onde teremos 4 opções</p>
+        <p style="text-align: left;">left ou esquerda.</p>
+        <p style="text-align: center;">center ou centro.</p>
+        <p style="text-align: right;">right ou direita.</p>
+        <p style="text-align: justify;">justify ou justificado, que faz o texto estar alinhado na esquerda e na direita, controlando os espaços entre as letras para garantir que isso aconteça.</p>
+        <br>
+        </p>
+        <p style="text-align: center;"><a href="modulo2.html">Voltar</a></p>
+    </main>
+</body>
+</html>

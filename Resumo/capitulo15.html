@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Capitulo 15</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <h1 id="principal">Capitulo 15</h1>
+        <h1>Seletores Personalizados</h1>
+        <h2>Usando id com css</h2>
+        <p><pre>
+            Em HTML id = em CSS #
+            Em HTML class = em CSS .
+        </pre></p>
+        <p>Aprendemos anteriormente a usar CSS nos seletores, criando configurações de estilo para cada seletor. Mas quando quisermos diferenciarmos um &lt;h1&gt; de um &lt;h1&gt;, por exemplo. Isso é possivel criando um seletor personalizado.</p>
+        Em html utilizamos dentro da tag o id="", ficando assim: &lt;h1 id=""&gt;. E quando estivermos configurando o CSS representaremos assim h1#.
+        <h2>As diferenças entre id e class</h2>
+        <p>id é utilizado para apenas uma tag por página. Funciona se você utilizar em multiplas tag, mas estará dando o uso indevido.</p>
+        <p>Class é o mais indicado para o uso em multiplas tags.</p>
+        <p>id em html = # em css</p>
+        <p>class em html = . em css</p>
+        <h2>Pseudo-classes em CSS</h2>
+        <p>Pseudo-classes é relacionado a um estado do elemento, se está ativo, marcado, etc...</p>
+        <p>Representa-se uma pseudo-classe com dois pontos (:), fazendo sua configuração em CSS:</p>
+        <pre>
+            h1:hover{configurações}
+        </pre>
+        <p>A pseudo-classe hover é para o estado de estar passando o mouse por cima. Então as configurações que você fizer utilizando ele só aparecerão ao passar o mouse em cima.</p>
+        <p>Pseudo-classes conhecidas por mim:</p>
+        <ul>
+            <li>:hover</li>
+            <li>:visited</li>
+            <li>:active</li>
+        </ul>
+        <h2>Pseudo-elementos em CSS</h2>
+        <p>Pseudo-elementos mexem diretamente no conteúdo periférico do elemento. Representação em CSS por dois pontos (::).</p>
+        <p>Pseudo elementos conhecidos por mim:</p>
+        <ul>
+            <li>::after</li>
+            <li>::before</li>
+        </ul>
+
+        <p>Observações:</p>
+        <ul>
+            <li># = id</li>
+            <li>. = class</li>
+            <li>: = pseudo-class</li>
+            <li>:: = pseudo-element</li>
+            <li>> = children</li>
+        </ul>
+        <h2>Modelo de Caixas</h2>
+        <p></p>
+        <br>
+        <p style="text-align: center;"><a href="modulo2.html" rel="prev">Voltar</a></p>
+    </main>
+</body>
+</html>
